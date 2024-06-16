@@ -31,7 +31,7 @@ drop_options = [
     {'label': 'NO2 (µg/m³)', 'value': 'NO2'},
     {'label': 'NOx (µg/m³)', 'value': 'NOx'},
     {'label': 'PM10 (µg/m³)', 'value': 'PM10'},
-    {'label': 'PM2.5 (µg/m³)', 'value': 'PM25'}
+    {'label': 'PM2.5 (µg/m³)', 'value': 'PM2.5'}
 ]
 
 mapbox_access_token = "pk.eyJ1IjoicGxvdGx5bWFwYm94IiwiYSI6ImNrOWJqb2F4djBnMjEzbG50amg0dnJieG4ifQ.Zme1-Uzoi75IaFbieBDl3A"
