@@ -31,7 +31,7 @@ drop_options = [
     {'label': 'NO2 (µg/m³)', 'value': 'NO2'},
     {'label': 'NOx (µg/m³)', 'value': 'NOx'},
     {'label': 'PM10 (µg/m³)', 'value': 'PM10'},
-    {'label': 'PM2.5 (µg/m³)', 'value': 'PM2.5'}
+    {'label': 'PM2.5 (µg/m³)', 'value': 'PM25'}
 ]
 
 mapbox_access_token = "pk.eyJ1IjoicGxvdGx5bWFwYm94IiwiYSI6ImNrOWJqb2F4djBnMjEzbG50amg0dnJieG4ifQ.Zme1-Uzoi75IaFbieBDl3A"
@@ -175,13 +175,6 @@ if opcion == "Análisis Global":
         selected_option_value = st_drop_values[selected_option_label]
         col=selected_option_value.split(' ')
         # print(proporcio.columns)
-
-        if col=='PM25':
-            col='PM2.5'
-            
-        else: 
-            pass
-
 
        
         st.markdown(
@@ -440,6 +433,13 @@ elif opcion == "Análisis por Estación":
     
     data = data[(data['Year'] == int(f[1])) | (data['Month'] == int(month)) | (data['Estacion'] == selected_option_value_est)]
     col1, col2 = st.columns([1, 3])
+    if col=='PM25':
+        col='PM2.5'
+            
+    else: 
+        pass
+
+
                             
     with col1:
         dias = data.groupby('Dia de la semana')[col[0]].mean().reset_index().sort_values(by='Dia de la semana', ascending=True)
