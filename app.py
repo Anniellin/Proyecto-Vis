@@ -176,6 +176,12 @@ if opcion == "Análisis Global":
         col=selected_option_value.split(' ')
         # print(proporcio.columns)
 
+        if col=='PM25':
+            col='PM2.5'
+            
+        else: 
+            pass
+
 
        
         st.markdown(
