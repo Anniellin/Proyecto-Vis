@@ -162,7 +162,7 @@ if opcion == "Análisis Global":
     
     with col2:
         st.button("Media aritmética", on_click=navegar, args=("Media",))
-        st.button("Desviación típica", on_click=navegar, args=("Varianza",))
+        st.button("Varianza", on_click=navegar, args=("Varianza",))
         st.button("Porcentaje de faltantes", on_click=navegar, args=("Proporcio",))
 
     with col3:
