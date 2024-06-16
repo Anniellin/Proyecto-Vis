@@ -442,6 +442,14 @@ elif opcion == "Análisis por Estación":
 
                             
     with col1:
+
+        if col[0]=='PM25':
+            col[0]='PM2.5'
+            
+        else: 
+            pass
+
+
         dias = data.groupby('Dia de la semana')[col[0]].mean().reset_index().sort_values(by='Dia de la semana', ascending=True)
         dias[col[0]] = dias[col[0]].round(2)
         fig = px.pie(dias, values=col[0], names='Dia de la semana', color_discrete_sequence=px.colors.qualitative.Set2, hole=.5)
